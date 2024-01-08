@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <div id="kitten-data">
+          <div class="form-group">
+            <label for="namename">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              name="name"
+              [(ngModel)]="kitten.name"
+              #name="ngModel"
+              required
+            />
+            <div *ngIf="name.errors">
+              <span *ngIf="name.errors?.['required'] && myForm.submitted"
+                >The name is required</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="breed">breed</label>
+            <input
+              type="text"
+              id="breed"
+              class="form-control"
+              name="breed"
+              #breed="ngModel"
+              [(ngModel)]="kitten.breed"
+              required
+            />
+            <div *ngIf="breed.errors">
+              <span *ngIf="breed.errors?.['required'] && myForm.submitted"
+                >the breed is required</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="pictureLink">Image link</label>
+            <input
+              type="text"
+              id="pictureLink"
+              class="form-control"
+              name="pictureLink"
+              #pictureLink="ngModel"
+              [(ngModel)]="kitten.pictureLink"
+              required
+            />
+            <div *ngIf="pictureLink.errors">
+              <span *ngIf="pictureLink.errors?.['required'] && myForm.submitted"
+                >The picture link is required</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Birthdate</label>
+            <input
+              type="date"
+              id="birthdate"
+              class="form-control"
+              name="birthdate"
+              #birthdate="ngModel"
+              [(ngModel)]="kitten.birthdate"
+              required
+            />
+            <div *ngIf="birthdate.errors">
+              <span *ngIf="birthdate.errors?.['required'] && myForm.submitted"
+                >The birthdate link is required</span
+              >
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <button type="reset" class="btn btn-secondary">Reset</button>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="myForm.invalid"
+        >
+          Add kitten
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

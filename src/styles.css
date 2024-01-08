@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #007bff;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}

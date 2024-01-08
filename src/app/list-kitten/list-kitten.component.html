@@ -1,0 +1,33 @@
+<button class="btn btn-primary add-kitten" (click)="toggleForm()">
+  Add new kitten
+</button>
+<div class="create-form">
+  <app-create-kitten
+    [toggleForm]="toggleForm.bind(this)"
+    *ngIf="showForm"
+    (sendKittenToList)="onReceiveNewKitten($event)"
+  ></app-create-kitten>
+</div>
+<h2>Cats who search a new family</h2>
+<br />
+<div class="cards">
+  <div class="card" *ngFor="let kitten of kittenList; let index = index">
+    <div class="card-header">
+      <div class="card-img">
+        <img src="{{ kitten.pictureLink }}" alt="" />
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ kitten.name }}</h5>
+      <button class="card-button" (click)="onAdoption(kitten)">
+        Adopt Now
+      </button>
+
+      <p>
+        Breed : {{ kitten.breed }}
+        <br />
+        Birthdate: {{ kitten.birthdate }}
+      </p>
+    </div>
+  </div>
+</div>

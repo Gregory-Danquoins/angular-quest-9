@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { Kitten } from './model/kitten.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'angular-9';
+  adoptedKitten: Kitten[] = [];
+
+  onKittenAdoption(kitten) {
+    this.adoptedKitten.push(kitten);
+  }
 }

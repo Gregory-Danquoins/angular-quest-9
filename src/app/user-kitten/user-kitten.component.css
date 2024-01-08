@@ -1,0 +1,22 @@
+.card {
+  border-radius: 10px;
+  width: 200px;
+
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card-img img {
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 100%;
+}
+.card-body {
+  padding: 10px 20px;
+}
+.card-body h2 {
+  margin: 10px 0px;
+}

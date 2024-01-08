@@ -1,0 +1,44 @@
+header {
+  background-color: #007bff;
+  padding: 1rem;
+  height: 11%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  position: fixed;
+}
+.header-container {
+  display: flex;
+  justify-content: space-around;
+}
+.header-container img {
+  display: inline-block;
+  text-align: center;
+}
+.title {
+  margin: auto;
+
+  color: aliceblue;
+  font-weight: bold;
+  text-align: center;
+}
+
+.my-cats {
+  width: 30%;
+  height: 100vh;
+}
+.my-cats div {
+  margin: auto;
+}
+.abandoned-cats {
+  border-right: 1px solid blue;
+  width: 70%;
+  overflow: auto;
+}
+.display-cats {
+  position: fixed;
+  margin-top: 5%;
+  height: 90%;
+  display: flex;
+  width: 100%;
+}
