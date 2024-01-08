@@ -37,7 +37,7 @@ header {
 }
 .display-cats {
   position: fixed;
-  margin-top: 5%;
+  margin-top: 8rem;
   height: 90%;
   display: flex;
   width: 100%;
